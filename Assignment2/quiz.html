@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <style>
+        h1 {
+            text-align: center;
+            padding-top: 25px;
+        }
+        .quiz {
+            padding-top: 20px;
+            background-color: dodgerblue;
+            height: 80vh;
+        }
+        .qn {
+            color: white;
+            margin-left: 50px;
+        }
+        .submit {
+            margin-top: 25px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 0.5em;
+        }
+    </style>
+    <body>
+        <h1>Ninja Quiz</h1>
+        <div class="quiz">
+            <h2 class="qn">On with the questions...</h2>
+
+            <div class="qn">
+                <p>01. How do you give a ninja directions?</p>
+                <input type="radio" id="q1a" value="A"><label for="q1a">Show them a map</label><br>
+                <input type="radio" id="q1b" value="B"><label for="q1b">Don't worry, a ninja will find you.</label><br>
+            </div>
+
+            <div class="qn">
+                <p>02. If a ninja has 3 apples, then gives one to Mario & one to Yoshi, how many apples does the ninja have left?</p>
+                <input type="radio" id="q2a" value="A"><label for="q2a">1 apple</label><br>
+                <input type="radio" id="q2b" value="B"><label for="q2b">3 apples, and 2 corpses</label><br>
+            </div>
+
+            <div class="qn">
+                <p>How do you know when you've met a ninja?</p>
+                <input type="radio" id="q3a" value="A"><label for="q3a">You'll recognize the outfit</label><br>
+                <input type="radio" id="q3b" value="B"><label for="q3b">The grim reaper will tell you</label><br>
+            </div>
+
+            <div class="qn">
+                <p>What's a ninja's favourite array method?</p>
+                <input type="radio" id="q4a" value="A"><label for="q4a">forEach</label><br>
+                <input type="radio" id="q4b" value="B"><label for="q4b">slice</label><br>
+            </div>
+
+            <div class="submit">
+                <button>Submit</button>
+            </div>
+        </div>
+    </body>
+</html>
