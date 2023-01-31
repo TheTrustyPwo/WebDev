@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <script>
+        function str2Array(str) {
+            return str.split(',').map(item => item.trim());
+        }
+
+        function drawTriangle(n) {
+            let result = '';
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j <= i; j++) result += '* ';
+                result += '\n';
+            }
+            return result;
+        }
+
+        function minMax(arr) {
+            let min = Number.MAX_SAFE_INTEGER, max = Number.MIN_SAFE_INTEGER, nonNumeric = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (isNaN(arr[i])) nonNumeric++;
+                else {
+                    min = Math.min(min, arr[i]);
+                    max = Math.max(max, arr[i]);
+                }
+            }
+            return `Min : ${min}; Max : ${max}; non-numeric : ${nonNumeric}`;
+        }
+
+        function evenOdd(arr) {
+            let even = [], odd = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (isNaN(arr[i]) || !Number.isInteger(arr[i])) continue;
+                if (arr[i] % 2 === 1) odd.push(arr[i]);
+                else even.push(arr[i]);
+            }
+            return [even, odd];
+        }
+    </script>
+    <body>
+
+    </body>
+</html>

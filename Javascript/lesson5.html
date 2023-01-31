@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <script>
+        function allElementsBetween10and100(arr) {
+            return arr.every(element => element >= 10 && element <= 100);
+        }
+
+        function allElementsSameDataType(arr, dataType) {
+            return arr.every(element => typeof element === dataType);
+        }
+
+        function containsMultipleOf7(arr) {
+            return arr.some(element => element % 7 === 0);
+        }
+
+        function containsArrayElements(arr) {
+            return arr.some(Array.isArray);
+        }
+
+        function getHighScoringStudents(students) {
+            return students.filter(student => student.fPercentage > 74);
+        }
+
+        function getNumericElements(arr) {
+            return arr.filter(element => typeof element === 'number');
+        }
+
+        function toRadians(angles) {
+            return angles.map(angle => angle * (Math.PI / 180));
+        }
+
+        function toSineRatio(angles) {
+            return angles.map(angle => Math.sin(angle * (Math.PI / 180)));
+        }
+
+        function getSurnames(names) {
+            return names.map(name => name.split(" ")[0]);
+        }
+
+        function processData(str) {
+            let lines = str.split("\n");
+            let data = lines.map(line => {
+                let parts = line.split("\t");
+                return { name: parts[0], horoscope: parts[1] };
+            });
+            let horoscopeCounts = {};
+            data.forEach(item => {
+                if (horoscopeCounts[item.horoscope]) horoscopeCounts[item.horoscope]++;
+                else horoscopeCounts[item.horoscope] = 1;
+            });
+            console.log(JSON.stringify(data));
+            console.log(JSON.stringify(horoscopeCounts));
+        }
+
+        let str = `CHAN DARREL	Virgo
+                    KHOO CHENFENG	Aquarius
+                    LONG CHENG XING	Leo
+                    AIDAN YEONG YUN LE	Taurus
+                    BAI NARUOSHUI	Cancer
+                    BEH HONG KIAT	Pisces
+                    CAI SHUCE	Libra
+                    CHENG XIZHE	Aquarius
+                    DECLAN NG KIAN HENG	Sagittarius
+                    FAN CHENGWEI	Cancer
+                    GWEE JYUN-EN, ASHER	Aries
+                    LEE JOON YEE BRYAN	Gemini
+                    LEE JUN XI	Aries
+                    LEE WENXI	Pisces
+                    LIM ZHU WEI	Gemini
+                    LIN ZEDONG	Virgo
+                    LIU ZHI	Cancer
+                    LO YU CAINE	Scorpio
+                    PNG SHUO YU, LUKE	Aquarius
+                    SHAUN SZE YU HENG	Aquarius
+                    SOH YU ZHE, RYAN	Sagittarius
+                    TAN GEK KWAN	Scorpio
+                    TAN SIONG JIK JUSTIN	Gemini
+                    TAN YOU LIANG	Scorpio
+                    VINCENT CAYADI	Aries
+                    WANG GUANYU	Sagittarius
+                    WANG SHUYAN	Aquarius
+                    XIONG RUIHAI	Cancer
+                    XU ZIWEN	Aquarius
+                    YANG AN YI	Sagittarius
+                    YU TENGJUN	Gemini
+                    ZHU YUNSONG	Virgo`;
+
+        processData(str);
+
+    </script>
+    <body>
+
+    </body>
+</html>

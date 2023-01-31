@@ -4,7 +4,46 @@
         <meta charset="UTF-8">
         <title>Title</title>
     </head>
+    <style>
+        body {
+            background-color: gray;
+            padding-top: 100px;
+        }
+        div {
+            background-color: white;
+            width: 50%;
+            padding-left: 3em;
+            margin: auto;
+        }
+        h1 {
+            padding-top: 20px;
+        }
+        p {
+            padding-bottom: 20px;
+        }
+        h2, p, label {
+            color: gray;
+        }
+    </style>
     <body>
+        <div>
+            <h1>Currency Converter</h1>
+            <h2>Try our free currency converter!</h2>
 
+            <label for="from">From:</label> <br>
+            <select name="from" id="from">
+                <option value="USD">USD</option>
+            </select> <br> <br>
+            <label for="to">To:</label> <br>
+            <select name="to" id="to">
+                <option value="EUR">EUR</option>
+            </select> <br> <br>
+            <label for="amount">Amount:</label> <br>
+            <input type="number" name="amount" id="amount">
+
+            <button>Convert</button>
+
+            <p>Amount: 68 USD : 59.40 EUR</p>
+        </div>
     </body>
 </html>
