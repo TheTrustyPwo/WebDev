@@ -1,0 +1,189 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ninja Quiz</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans&family=Source+Sans+Pro');
+    html, body {
+        margin:0;
+        padding:0;
+        font-family:"Noto Sans", Arial, sans-serif;
+        box-sizing: border-box;
+        background-color: #007bff;
+        }
+
+    h1 {
+        background-color: white;
+        text-align: center;
+        color: #007bff;
+        padding : 60px 0 40px;
+        margin: 0;
+        font-size:4em;
+        font-weight:300;
+        font-family :"Source Sans Pro", sans-serif;
+    }
+
+    .result {
+        background-color: #eee;
+        color: #212529;
+        font-size: 1.2em;
+        text-align: center;
+        padding:40px;
+        margin: 0;
+    }
+
+    .result span {
+        font-weight: 300;
+        font-family: "Source Sans Pro", serif;
+        color : #007bff;
+        font-size: 70px;
+        padding : 20px;
+    }
+
+    .quiz {
+        color: #fff;
+        margin:0;
+        padding: 20px 180px;
+    }
+
+    .quiz h2 {
+        margin : 60px 0;
+        font-size: 40px;
+    }
+
+    ol {
+        list-style-type: decimal-leading-zero;
+    }
+
+    li {
+        margin-bottom: 2em;
+    }
+
+    li > div {
+        margin-block: 0.4em;
+    }
+
+    form > div:last-of-type {
+        text-align : center;
+    }
+
+    button {
+        color: #212529;
+        background-color: #f4f6f7;
+        padding: 15px 20px;
+        border-radius : 16px;
+        font-size : 1.1em;
+    }
+
+    .d-none {
+        display : none;
+    }
+  </style>
+</head>
+<body>
+  <!-- top section -->
+  <h1>Ninja Quiz</h1>
+
+  <!-- result section -->
+  <div id='result' class="result d-none">
+    You are <span id='score'>0%</span> ninja
+  </div>
+
+  <!-- quiz section -->
+  <div class="quiz">
+  		<h2>On with the questions</h2>
+
+  		<form>
+  			<ol>
+  			    <!-- question -->
+  			</ol>
+	        <div>
+	          <button id="button" type="button">Submit</button>
+	        </div>
+  		</form>
+  </div>
+<script>
+    const questions = [
+        {
+            "question" : "How do you give a Ninja directions",
+            "options" : ["Show them a map", "Don't worry, a ninja will find you."],
+            "correct": "q1b"
+        },
+        {
+            "question": "How do you know when you've met a ninja?",
+            "options" : ["You'll recognise the outfit", "The grim reaper will tell you."],
+            "correct": "q2b"
+        },
+        {
+            "question": "If a ninja has 3 apples, then gives one to Mario & one to Yoshi, how many apples does the ninja have left?",
+            "options": ["1 apple", "3 apples and 2 corpses"],
+            "correct": "q3b"
+        },
+        {
+            "question": "What's a ninja's favourite array method?",
+            "options": ["forEach", "slice"],
+            "correct": "q4b"
+        }
+    ];
+
+    function populateQuiz(data){
+        const list = document.querySelector('ol');
+        data.forEach((element, i) => {
+            const question = document.createElement('li');
+            const option1 = document.createElement('label');
+            const option2 = document.createElement('label');
+            const input1 = document.createElement('input');
+            const input2 = document.createElement('input');
+            const div1 = document.createElement('div');
+            const div2 = document.createElement('div');
+
+            input1.setAttribute('type', 'radio');
+            input1.setAttribute('name', 'q' + (i + 1) + 'a');
+            input1.setAttribute('id', 'q' + (i + 1) + 'a')
+            input1.setAttribute('value', 1);
+            option1.appendChild(input1);
+            option1.appendChild(document.createTextNode(element['options'][0]));
+
+            input2.setAttribute('type', 'radio');
+            input2.setAttribute('name', 'q' + (i + 1) + 'b');
+            input2.setAttribute('id', 'q' + (i + 1) + 'b');
+            input2.setAttribute('value', 2);
+            option2.appendChild(input2);
+            option2.appendChild(document.createTextNode(element['options'][1]));
+
+            question.appendChild(document.createTextNode(element['question']));
+
+            div1.appendChild(option1);
+            div2.appendChild(option2);
+
+            question.appendChild(div1);
+            question.appendChild(div2);
+
+            list.appendChild(question);
+        });
+    }
+
+    function evaluateScore() {
+        //code this function
+        let marks = 0;
+        let elements = document.getElementsByTagName('input');
+        const correct = questions.map(question => question.correct);
+        Array.from(elements).filter(element => element.checked).forEach(element => {
+            console.log(element.innerHTML)
+            if (correct.includes(element.id)) marks++;
+        })
+
+        let score = document.getElementById('result');
+        let result = document.getElementById('score');
+        result.innerHTML = `${Math.round((marks/questions.length) * 100)}%`;
+        score.setAttribute('class', 'result');
+    }
+
+    document.querySelector('button').addEventListener('click', evaluateScore);
+
+    populateQuiz(questions);
+</script>
+</body>
+</html>

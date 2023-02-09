@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://kit.fontawesome.com/d4552c7c1c.js"></script>
+  <title>Todo List</title>
+  <style>
+    body {
+      background-color: #352F5B;
+      font-family:Helvetica, Arial;
+      margin:0;
+    }
+    .container {
+      max-width: 400px;
+      color: white;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    input {
+      display:block;
+      line-height: 1.5;
+      height:38px;
+      width:100%;
+      background-color: rgba(0,0,0,0.2);
+      border:none;
+      padding: .5rem 1rem;
+      border-radius: .4rem;
+      color: #fff;
+      font-size: 1rem;
+    }
+    header {
+        text-align:center;
+        margin: 1.5rem 0;
+    }
+    h1 { font-size: 2.5rem;}
+    .todos {
+      color:rgb(248, 249, 250);
+      line-height:1.5;
+      list-style:none;
+      margin: 0;
+      padding:0;
+    }
+    .todos li {
+      border-radius: .25rem;
+      background-color:#423a6f;
+      padding:1rem 1.25rem;
+      border:1px solid rgba(0,0,0,.2);
+      position:relative;
+      line-height : 18px;
+    }
+    .fa-trash-alt {
+      cursor:pointer;
+      position:absolute;
+      right:0;
+      margin-right:1.25rem;
+      display:inline-block;
+      width: 16px;
+      height: 18px;
+    }
+    .add {
+      margin : 1.5rem 0;
+    }
+    label {
+      display:block;
+      text-align: center;
+      margin-bottom:.5rem;
+    }
+    .hide { display:none;}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Todo List</h1>
+      <form class="search">
+        <input type="text" name="search" placeholder="search todos" id="search"/>
+      </form>
+    </header>
+
+    <ul class="todos" id="todos">
+      <li>
+        <span>play mariokart</span>
+        <i class="fas fa-trash-alt"></i>
+      </li>
+      <li>
+        <span>defeat ganon in zelda</span>
+        <i class="fas fa-trash-alt"></i>
+      </li>
+      <li>
+        <span>make a veggie pie</span>
+        <i class="fas fa-trash-alt"></i>
+      </li>
+    </ul>
+
+    <form class="add">
+      <label>Add a new todo...</label>
+      <input type="text" name="add" />
+    </form>
+
+  </div>
+  
+
+<script>
+const addForm = document.querySelector('.add'); //<form>
+const list = document.querySelector('.todos'); //<ul>
+const search = document.querySelector('.search input'); //<input name="search">
+
+//function for adding a new todo list to <ul>
+    function addNewTask(e) {
+        e.preventDefault();
+
+        let task = this.add.value.trim();
+        if (!task) return;
+
+        let HTML = `<li><span>${task}</span><i class="fas fa-trash-alt"></i></li>`;
+        list.innerHTML += HTML;
+    }
+
+//function for deleting a todo li
+    function removeEvent(e) {
+        let targetElement = e.target;
+        let parentLI = targetElement.parentElement;
+
+        if (parentLI.tagName == "LI" && targetElement.tagName == "I") {
+            parentLI.remove();
+        }
+    }
+
+//function to add or remove the "hide" class for <li> that "includes()"" the search word
+  function searchEvent(e) {
+    e.preventDefault();
+
+    let keyPressed = document.getElementById('search').value.toUpperCase();
+
+    let ul = document.getElementById('todos');
+    let li = ul.getElementsByTagName('li');
+
+    for (let i = 0; i < li.length; i ++){
+      let a = li[i].getElementsByTagName('span')[0];
+      if (a.innerHTML.toUpperCase().includes(keyPressed) && keyPressed !== " ") {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+
+//event: pressing return to submit form and add to list
+  document.forms[1].addEventListener('submit', addNewTask)
+//event: delete todos li
+  list.addEventListener('click', removeEvent);
+//event: keyup event for the search input
+  document.forms[0].addEventListener('keyup', searchEvent);
+</script>
+</body>
+</html>
