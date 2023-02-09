@@ -2,22 +2,148 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>Web Development</title>
     </head>
+    <style>
+        html {
+            background: #2b5876;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            font-family: 'Roboto', sans-serif;
+            min-height: 100%;
+            display: flex;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-transform: uppercase;
+            color: #614385;
+            letter-spacing: -1px;
+        }
+
+        .container > * {
+            display: block;
+            margin: 3em 0;
+        }
+
+        .assignment {
+            background: #654ea3;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 2em;
+            padding: 1em 10em 1em 1em;
+            width: 50em;
+        }
+
+        .description {
+            margin-top: -1em;
+            font-size: 16px;
+            color: #614385;
+        }
+    </style>
     <body>
-        <div>
-            <h2>Assignment 1</h2>
-            <a href="Assignment1/exercise1.html">Exercise 1</a> <br>
-            <a href="Assignment1/exercise2.html">Exercise 2</a> <br>
-            <a href="Assignment1/exercise3.html">Exercise 3</a> <br>
-        </div>
-        <div>
-            <h2>Assignment 2</h2>
-            <a href="Assignment2/quiz.html">Ninja Quiz</a> <br>
-        </div>
-        <a href="Ninja Quiz/ninjaquiz.html">Ninja Quiz with Javascript</a> <br>
-        <a href="Todo List/todolist.html">Todo List</a> <br>
-        <a href="Currency Converter/currency.html">Currency Converter</a> <br>
-        <a href="Weather App/weather.html">Weather App</a> <br>
+
+        <div class="container"></div>
+
     </body>
+    <script>
+        const assignments = {
+            "Assignment 1": {
+                dateCompleted: "9 Jan 2023",
+                description: "HTML exercise to familiarise with CSS and HTML elements",
+                files: [
+                    {
+                        "name": "Exercise 1",
+                        "link": "Assignment1/exercise1.html",
+                        "description": "New Years website",
+                    },
+                    {
+                        "name": "Exercise 2",
+                        "link": "Assignment1/exercise2.html",
+                        "description": "Super Sale Black Friday!"
+                    },
+                    {
+                        "name": "Exercise 3",
+                        "link": "Assignment1/exercise3.html",
+                        "description": "Pet supply shop advertisement"
+                    },
+                ],
+            },
+            "Assignment 2": {
+                dateCompleted: "9 Jan 2023",
+                description: "Applying HTML forms to simple static sites",
+                files: [
+                    {
+                        "name": "Ninja Quiz",
+                        "link": "Assignment2/quiz.html",
+                        "description": "Quiz questions without a grading system",
+                    },
+                    {
+                        "name": "Currency Converter",
+                        "link": "Assignment2/currency.html",
+                        "description": "Nothing to do here..."
+                    },
+                ],
+            },
+            "Ninja Quiz": {
+                dateCompleted: "31 Jan 2023",
+                description: "Learnt to add functionality to HTML forms with Javascript, questions and answers are also rendered dynamically",
+                files: [
+                    {
+                        "name": "Ninja Quiz",
+                        "link": "Ninja%20Quiz/ninjaquiz.html",
+                        "description": "Main assignment file",
+                    },
+                ],
+            },
+            "Todo List": {
+                dateCompleted: "6 Feb 2023",
+                description: "Interactive todo list which allows you to add, remove and search for items",
+                files: [
+                    {
+                        "name": "Todo List",
+                        "link": "Todo%20List/todolist.html",
+                        "description": "Main assignment file",
+                    },
+                ],
+            },
+            "Currency Converter": {
+                dateCompleted: "6 Feb 2023",
+                description: "Real time currency converter, implementing using an external API and hence learnt to use the Javascript asynchronous `fetch` method",
+                files: [
+                    {
+                        "name": "Currency Converter",
+                        "link": "Currency%20Converter/currency.html",
+                        "description": "Main assignment file",
+                    },
+                ],
+            },
+            "Weather App": {
+                dateCompleted: "9 Feb 2023",
+                description: "Weather App with a minimalistic design implemented with AccuWeather's API",
+                files: [
+                    {
+                        "name": "Weather App",
+                        "link": "Weather%20App/weather.html",
+                        "description": "Main assignment file",
+                    },
+                ],
+            }
+        }
+
+        const container = document.querySelector(".container");
+
+        function load() {
+            Object.entries(assignments).forEach(([name, data]) => {
+               const div = document.createElement("div");
+               div.className = "assignment";
+               div.innerHTML += `<h1>${name} - ${data.dateCompleted}</h1>`;
+               div.innerHTML += `<p class="description">${data.description}</p>`;
+               data.files.forEach(file => div.innerHTML += `<p><a href=${file.link}>${file.name}</a> - ${file.description}</p>`);
+               container.appendChild(div);
+            });
+        }
+
+        load();
+    </script>
 </html>
