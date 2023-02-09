@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <title>Ninja Weather</title>
+    </head>
+    <style>
+        body {
+            background: #eeedec;
+            letter-spacing: 0.2em;
+            font-size: 0.8em;
+        }
+
+        .container {
+            max-width: 400px;
+        }
+
+        .icon {
+            position: relative;
+            top: -50px;
+            border-radius: 50%;
+            width: 100px;
+            margin-bottom: -50px;
+        }
+    </style>
+    <body>
+        <div class="container my-5 mx-auto">
+            <h1 class="text-muted text-center my-4">Ninja Weather</h1>
+            <form class="change-location my-4 text-center text-muted">
+                <label for="city">Enter a location for weather information</label>
+                <input class="form-control p-4" id="city" type="text">
+            </form>
+
+            <div class="card shadow-lg rounded d-none">
+                <img alt="img" class="time card-img-top" src="https://via.placeholder.com/400x300">
+                <div class="icon bg-light mx-auto text-center">
+                    <img alt="" src="">
+                </div>
+                <div class="text-muted text-uppercase text-center details">
+                    <h5 class="my-3"> City name</h5>
+                    <div class="my-3">Weather condition</div>
+                    <div class="display-4 my-4">
+                        <span>temp</span>
+                        <span>&deg;C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const APIkey = "Gbcc9ZrMcZClO2QjfMKf3zAYZiZSVlW6";
+        const weatherURI = "https://dataservice.accuweather.com/currentconditions/v1/";
+        const cityURI = "https://dataservice.accuweather.com/locations/v1/cities/search";
+
+        const cityForm = document.querySelector('form');
+        const card = document.querySelector('.card');
+        const details = document.querySelector('.details');
+        const time = document.querySelector('img.time');
+        const icon = document.querySelector('.icon img');
+
+        async function getCity(city) {
+            const response = await fetch(`${cityURI}?apikey=${APIkey}&q=${city}`);
+            const data = await response.json();
+            return data[0];
+        }
+
+        async function getWeather(id) {
+            const response = await fetch(`${weatherURI}${id}?apikey=${APIkey}`);
+            const data = await response.json();
+            return data[0];
+        }
+
+        cityForm.addEventListener('submit', async e => {
+            e.preventDefault();
+
+            const input = cityForm.city.value.trim();
+            cityForm.reset();
+
+            const city = await getCity(input);
+            const weather = await getWeather(city["Key"]);
+
+            details.innerHTML = `
+                <h5 class="my-3">${city["EnglishName"]}</h5>
+                <div class="my-3">${weather["WeatherText"]}</div>
+                <div class="display-4 my-4">
+                    <span>${weather["Temperature"]["Metric"]["Value"]}</span>
+                    <span>&deg;C</span>
+                </div>
+            `;
+
+            const iconSrc = `img/icons/${weather["WeatherIcon"]}.svg`;
+            icon.setAttribute('src', iconSrc);
+
+            let timeSrc = weather["IsDayTime"] ? "img/day.svg" : "img/night.svg";
+            time.setAttribute('src', timeSrc);
+
+            if (card.classList.contains('d-none')) card.classList.remove('d-none');
+        });
+    </script>
+</html>
