@@ -139,14 +139,10 @@ const search = document.querySelector('.search input'); //<input name="search">
     let ul = document.getElementById('todos');
     let li = ul.getElementsByTagName('li');
 
-    for (let i = 0; i < li.length; i ++){
-      let a = li[i].getElementsByTagName('span')[0];
-      if (a.innerHTML.toUpperCase().includes(keyPressed) && keyPressed !== " ") {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
-      }
-    }
+    Array.from(li).forEach((element) => {
+      let a = element.getElementsByTagName('span')[0];
+      element.style.display = (a.innerHTML.toUpperCase().includes(keyPressed) && keyPressed !== " ") ? "" : "none";
+    });
   }
 
 //event: pressing return to submit form and add to list
