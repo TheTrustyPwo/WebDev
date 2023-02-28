@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class List</title>
+        <style>
+			body {
+				width: 100%;
+				overflow-x: hidden;
+				background-color: #0a192f;
+				color: #8892b0;
+				font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+				font-size: 20px;
+				text-align: center;
+				padding-bottom: 3em;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background-color: #495670;
+				border: 3px solid #0a192f;
+				border-radius: 10px;
+			}
+
+			::-webkit-scrollbar {
+				width: 12px;
+			}
+
+			*, ::before, ::after {
+				box-sizing: inherit;
+			}
+
+			h1 {
+				display: block;
+				padding: 20px 0 0 0;
+				color: #64ffda;
+				font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+				font-size: 50px;
+				font-weight: 400;
+			}
+
+			a {
+				color: #64ffda;
+				background-color: transparent;
+				border: 1px solid #64ffda;
+				border-radius: 4px;
+				padding: 0.5rem 1rem;
+				font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+				line-height: 1;
+				text-decoration: none;
+				cursor: pointer;
+				transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+				margin-left: 15px;
+				font-size: 13px;
+			}
+
+			a::after {
+				display: none !important;
+			}
+
+			#content {
+				display: flex;
+				justify-content: space-between;
+				width: 25%;
+				margin: -5px auto 10px auto;
+			}
+
+			label {
+				color: #64ffda;
+				font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+				font-weight: 400;
+			}
+
+			ol {
+				list-style-position: inside;
+			}
+
+			li {
+				padding-inline: .4em;
+				margin: 0 0 0.3em;
+			}
+        </style>
+    </head>
+    <body>
+		<h1>Class List <span id="class-name"></span></h1>
+		<div id="content">
+			<form>
+				<label>Class: </label>
+				<select name="class">
+					<option value="">Select class</option>
+					<option value="4I1">4I1</option>
+					<option value="4I2">4I2</option>
+					<option value="4A3">4A3</option>
+				</select>
+			</form>
+			<a href="classphotos.html">Class Photos</a>
+		</div>
+        <ol></ol>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const cls = (urlParams.get('class') || '').toUpperCase();
+            const ol = document.querySelector('ol');
+			document.querySelector('#class-name').innerHTML = cls;
+
+            const displayClassList = (cls, students) => {
+                if (!cls || !students.length) return;
+                students.forEach(student => ol.innerHTML += `<li>${student.name}</li>`);
+            }
+
+            fetch('sec4.json')
+                .then(resp => resp.json())
+                .then(data => displayClassList(cls, data.filter(obj => obj.class === cls).sort((a, b) => a.sno - b.sno)));
+
+            document.querySelector('select').addEventListener('change', e => {
+                document.forms[0].submit();
+            })
+
+			document.querySelector("a[href='classphotos.html']").addEventListener("click", e => {
+				e.preventDefault();
+				window.location.href = "classphotos.html" + (location.search ? location.search : '');
+			});
+        </script>
+    </body>
+</html>

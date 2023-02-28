@@ -1,0 +1,380 @@
+[
+  {
+    "class": "4A3",
+    "sno": 5,
+    "name": "CHAN DARREL",
+    "horoscope": "Virgo",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B79CE16E7-734A-4116-9853-5C9827977A36%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 10,
+    "name": "KHOO CHENFENG",
+    "horoscope": "Aquarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B566A066E-C298-4C2A-84D7-C3109BDC1841%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 18,
+    "name": "LONG CHENG XING",
+    "horoscope": "Leo",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B6A20AC94-66CD-44C4-B065-A5C5CBA70BC3%7D.jpg"
+  },
+  {
+    "class": "4I2",
+    "sno": 16,
+    "name": "LOW JUN KAI",
+    "horoscope": "Cancer",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BD1C89B6F-82C0-4F3D-A199-069A7B1E0E1B%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 1,
+    "name": "AIDAN YEONG YUN LE",
+    "horoscope": "Taurus",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BC5D7E59B-2039-4020-92F1-46F055FC2934%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 2,
+    "name": "BAI NARUOSHUI",
+    "horoscope": "Cancer",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BF7DD7C2B-5FBC-40AF-9F52-8113ACCD8649%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 3,
+    "name": "BEH HONG KIAT",
+    "horoscope": "Pisces",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BBA3AC247-32E7-4829-BE66-CC888C5FC466%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 4,
+    "name": "CAI SHUCE",
+    "horoscope": "Libra",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B74B26F42-73AE-432E-A6DB-F82F4AF8539B%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 6,
+    "name": "CHENG XIZHE",
+    "horoscope": "Aquarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B89381B9F-D14C-4832-AA19-9EB9AFA7A2D2%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 7,
+    "name": "DECLAN NG KIAN HENG",
+    "horoscope": "Sagittarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BF27349BB-9021-4612-A07D-51A6D93A7672%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 3,
+    "name": "ELLIOT NG DING RAN",
+    "horoscope": "Cancer",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B1FDB5B4F-9F63-4BB1-B566-B513DD432F82%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 4,
+    "name": "EUGENE LEE YU FENG",
+    "horoscope": "Aries",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B81197D66-55A1-4915-BFAE-175CF8F2DCC6%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 8,
+    "name": "FAN CHENGWEI",
+    "horoscope": "Cancer",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B1F8E55DD-9F6A-490D-B654-7F0CAE7A5241%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 9,
+    "name": "GWEE JYUN-EN, ASHER",
+    "horoscope": "Aries",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B3ACD97DB-48E7-449B-B664-78B222F428D2%7D.jpg"
+  },
+  {
+    "class": "4I2",
+    "sno": 8,
+    "name": "JADON JUSDI",
+    "horoscope": "Cancer",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BC9BF34D5-E86F-4E4F-B475-E5F949034BCC%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 7,
+    "name": "KONG JIA LE",
+    "horoscope": "Capricorn",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B0CF70B90-9B6F-4457-92B0-638B7FFCFED3%7D.jpg"
+  },
+  {
+    "class": "4I2",
+    "sno": 12,
+    "name": "LEE JIE, BRENDON",
+    "horoscope": "Capricorn",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B4C99A4A7-8578-4B81-BBD2-06C3E9BAC973%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 11,
+    "name": "LEE JOON YEE BRYAN",
+    "horoscope": "Gemini",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B59807C06-66E6-4F12-922C-384D023A2995%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 12,
+    "name": "LEE JUN XI",
+    "horoscope": "Aries",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B24EDD792-E3AD-4AE6-96F1-4C06B68DACDF%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 13,
+    "name": "LEE WENXI",
+    "horoscope": "Pisces",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B5E184C9F-42E6-4B14-A66F-AE5274CCAE6D%7D.jpg"
+  },
+  {
+    "class": "4I2",
+    "sno": 14,
+    "name": "LIEW WEI CHENG",
+    "horoscope": "Aquarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B2B0384EE-8C25-437E-8B9A-52A4300FB702%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 11,
+    "name": "LIM RUI SIANG",
+    "horoscope": "Pisces",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B8C84942D-EA4E-4DD6-8E82-3C9CF5A32F3F%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 14,
+    "name": "LIM ZHU WEI",
+    "horoscope": "Gemini",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B9D87C468-6FFA-4643-A899-81B28D409793%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 15,
+    "name": "LIN ZEDONG",
+    "horoscope": "Virgo",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B675BFE94-0AA9-4421-9392-C533543A5920%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 16,
+    "name": "LIU ZHI",
+    "horoscope": "Cancer",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BE26DC174-F7B9-40D0-9927-DE6AD8B6B3B6%7D.jpg"
+  },
+  {
+    "class": "4I2",
+    "sno": 15,
+    "name": "LIU ZHILE",
+    "horoscope": "Taurus",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B50989885-C725-4A42-9323-BD3436544E32%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 17,
+    "name": "LO YU CAINE",
+    "horoscope": "Scorpio",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BE50D9714-627D-4B4A-8886-FF986CD9DB0D%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 16,
+    "name": "NGUYEN VU KIEN RAYMOND",
+    "horoscope": "Pisces",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B72AF5B2F-AC68-48AA-A9E0-A270C51BE2C9%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 17,
+    "name": "NI HAORAN",
+    "horoscope": "Sagittarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BDB949725-919A-4C7F-A1FF-0B299D0E536D%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 18,
+    "name": "NIE ZIXIANG",
+    "horoscope": "Pisces",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BD777CF24-68EF-4E1F-8590-F0A9F7430F01%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 19,
+    "name": "PNG SHUO YU, LUKE",
+    "horoscope": "Aquarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B1B9715BF-3B32-4A0A-A4C8-AADE12C07198%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 20,
+    "name": "SHAUN SZE YU HENG",
+    "horoscope": "Aquarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B3580BAD2-5568-4519-95CC-5CF3C4411ADA%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 21,
+    "name": "SOH YU ZHE, RYAN",
+    "horoscope": "Sagittarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BF94610AE-FCDB-4EA2-AD83-241133BD7DD0%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 21,
+    "name": "SUN BEICHEN",
+    "horoscope": "Pisces",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B454F8C4F-ADE7-49BE-A868-8CC05C718213%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 22,
+    "name": "SUN WEIRAN",
+    "horoscope": "Aries",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B6FC5ECB5-DBD6-41B9-98AE-1CDE931AF977%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 22,
+    "name": "TAN GEK KWAN",
+    "horoscope": "Scorpio",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BECC18F97-81D9-4E5B-883D-001186EB3580%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 23,
+    "name": "TAN SIONG JIK JUSTIN",
+    "horoscope": "Gemini",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B3262B361-22A1-4270-AF43-21C8D0055865%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 24,
+    "name": "TAN YOU LIANG",
+    "horoscope": "Scorpio",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B220765AA-6AAA-4524-AF23-B6B78CA06834%7D.jpg"
+  },
+  {
+    "class": "4I2",
+    "sno": 23,
+    "name": "VIJAY RAMANATHAN",
+    "horoscope": "Taurus",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B4ED68295-C78A-46FA-89B9-90A685630163%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 25,
+    "name": "VINCENT CAYADI",
+    "horoscope": "Aries",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BEC1D99B5-2FCC-4706-B88C-674D09F18528%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 26,
+    "name": "WANG GUANYU",
+    "horoscope": "Sagittarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BB5EADD49-6FAC-4A86-87A3-F5E7BD9B42C0%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 27,
+    "name": "WANG SHUYAN",
+    "horoscope": "Aquarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B7C572301-5DE1-4F01-ADFF-5592D7D10C6C%7D.jpg"
+  },
+  {
+    "class": "4I2",
+    "sno": 27,
+    "name": "WOO YU BIN EVAN",
+    "horoscope": "Taurus",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7BC3F4FBD7-D0C6-42A4-871B-0B225AD2614B%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 28,
+    "name": "XIONG RUIHAI",
+    "horoscope": "Cancer",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B1E883F9A-B604-4415-B87F-5F71813DBD33%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 29,
+    "name": "XU ZIWEN",
+    "horoscope": "Aquarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B238C5F69-88FB-4B86-90BE-43D1ACE8782B%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 30,
+    "name": "YANG AN YI",
+    "horoscope": "Sagittarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B16A3BB6C-8381-49E6-8F71-1A3587451626%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 31,
+    "name": "YU TENGJUN",
+    "horoscope": "Gemini",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B1CD681A3-FC72-4BA6-B5A4-28247B25C932%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 30,
+    "name": "ZHANG YIHAO",
+    "horoscope": "Cancer",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B9EA27D93-CE2D-47E3-AECD-4CAD0AFD2847%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 31,
+    "name": "ZHAO JIANXIANG",
+    "horoscope": "Aquarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B2E114C19-AAC9-43B6-A75E-358102122A12%7D.jpg"
+  },
+  {
+    "class": "4I1",
+    "sno": 32,
+    "name": "ZHAO YAOQI",
+    "horoscope": "Sagittarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B451A0F81-DC50-4DED-AA5F-8B04DFD7A924%7D.jpg"
+  },
+  {
+    "class": "4I2",
+    "sno": 30,
+    "name": "ZHOU SHULEI",
+    "horoscope": "Sagittarius",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B11720886-2455-4320-B2DF-D7BDCB6E9072%7D.jpg"
+  },
+  {
+    "class": "4I2",
+    "sno": 31,
+    "name": "ZHOU YI REN",
+    "horoscope": "Virgo",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B8E2A9399-E027-4E3A-A97A-06901406DAF5%7D.jpg"
+  },
+  {
+    "class": "4A3",
+    "sno": 32,
+    "name": "ZHU YUNSONG",
+    "horoscope": "Virgo",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B3E171B50-387D-4B6D-8B83-E04A9B57F2CC%7D.jpg"
+  },
+  {
+    "class": "4I2",
+    "sno": 32,
+    "name": "ZUO CHENYU",
+    "horoscope": "Taurus",
+    "photo": "https://isphs.hci.edu.sg/data/photos/%7B5FDAD59A-95F2-4996-ABEF-E6B4D5F27216%7D.jpg"
+  }
+]

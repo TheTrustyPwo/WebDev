@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <title>Class List</title>
+        <style>
+			body {
+				width: 100%;
+				overflow-x: hidden;
+				background-color: #0a192f;
+				color: #8892b0;
+				font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+				font-size: 20px;
+				text-align: center;
+				padding-bottom: 3em;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background-color: #495670;
+				border: 3px solid #0a192f;
+				border-radius: 10px;
+			}
+
+			::-webkit-scrollbar {
+				width: 12px;
+			}
+
+			*, ::before, ::after {
+				box-sizing: inherit;
+			}
+
+			h1 {
+				display: block;
+				padding: 20px 0 0 0;
+				color: #64ffda;
+				font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+				font-size: 50px;
+				font-weight: 400;
+			}
+
+			a {
+				color: #64ffda;
+				background-color: transparent;
+				border: 1px solid #64ffda;
+				border-radius: 4px;
+				padding: 0.5rem 1rem;
+				font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+				line-height: 1;
+				text-decoration: none;
+				cursor: pointer;
+				transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+				margin-left: 15px;
+				font-size: 13px;
+			}
+
+			a::after {
+				display: none !important;
+			}
+
+			#content {
+				display: flex;
+				justify-content: space-between;
+				width: 25%;
+				margin: -5px auto 10px auto;
+			}
+
+			label {
+				color: #64ffda;
+				font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+				font-weight: 400;
+			}
+
+			#container {
+				padding: 0;
+				list-style-type: none;
+				width: 900px;
+				margin: auto;
+			}
+
+			@media only screen and (max-width: 800px) {
+				#container {
+					width: 100%;
+				}
+			}
+
+			@media only screen and (min-width: 1280px) {
+				#container {
+					width: 900px;
+				}
+			}
+
+			#container li {
+				width: 160px;
+				height: 213px;
+				display: inline-block;
+				position: relative;
+				overflow: hidden;
+				border-radius: 16px;
+				background-color: #e9e6fb;
+				margin: 4px 5px;
+				box-sizing: border-box;
+			}
+
+			#container img {
+				height: 106%;
+				position: absolute;
+				top: -6%;
+				left: -3%;
+				aspect-ratio: 3 / 4;
+			}
+
+			#container li p {
+				font-size: 0.8em;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding: 0.2em;
+				margin: 0;
+				box-sizing: border-box;
+				background-color: #00000033;
+				color: white;
+				text-align: center;
+				line-height: 1.2;
+			}
+
+			#container li span {
+				font-size: 0.6em;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+			}
+
+			#container li:hover {
+				cursor: pointer;
+				background-color: rgba(200, 210, 220, 0.3);
+				box-shadow: 2px 4px 6px #aaa;
+			}
+
+			.Aries, .Leo, .Sagittarius {
+				border-color: red;
+			}
+
+			.Pisces, .Cancer, .Scorpio {
+				border-color: #33f;
+			}
+
+			.Capricorn, .Taurus, .Virgo {
+				border-color: #090;
+			}
+
+			.Aquarius, .Gemini, .Libra {
+				border-color: #aaa;
+			}
+
+			.Leo, .Scorpio, .Libra, .Taurus {
+				border-style: double;
+				border-width: 5px;
+			}
+
+			.Aries, .Cancer, .cCapricorn, .Gemini {
+				border-style: solid;
+				border-width: 2px;
+			}
+
+			.Sagittarius, .Aquarius, .Pisces, .Virgo {
+				border-style: dotted;
+				border-width: 3px;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>Class Photos <span id="class-name"></span></h1>
+		<div id="content">
+			<form>
+				<label>Class: </label>
+				<select name="class">
+					<option value="">Select class</option>
+					<option value="4I1">4I1</option>
+					<option value="4I2">4I2</option>
+					<option value="4A3">4A3</option>
+				</select>
+			</form>
+			<a href="classlist.html">Class List</a>
+		</div>
+        <ul id="container"></ul>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const cls = (urlParams.get('class') || '').toUpperCase();
+            const ul = document.querySelector('ul');
+			document.querySelector('#class-name').innerHTML = cls;
+
+            const displayClass = (cls, students) => {
+                if (!cls || !students.length) return;
+                students.forEach(student => {
+                    ul.innerHTML += `<li class="${student.horoscope}">
+								<img src="${student.photo}" alt="">
+								<span>${student.class}${student.sno.toString().padStart(2, '0')}</span>
+								<p>${student.name}</p>
+								</li>`
+                })
+            }
+
+            fetch('sec4.json')
+                .then(resp => resp.json())
+                .then(data => displayClass(cls, data.filter(obj => obj.class === cls).sort((a, b) => a.sno - b.sno)));
+
+            //write an event-listener to trigger form submission when user changes options
+            document.querySelector('select').addEventListener('change', e => {
+                document.forms[0].submit();
+            })
+
+			document.querySelector("a[href='classlist.html']").addEventListener("click", e => {
+				e.preventDefault();
+				window.location.href = "classlist.html" + (location.search ? location.search : '');
+			});
+
+        </script>
+    </body>
+</html>
